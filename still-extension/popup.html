@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 24px;
+      background-color: #ffffff;
+      color: #0f172a;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.5px;
+      color: #2563eb;
+    }
+    .tagline {
+      font-size: 11px;
+      color: #64748b;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #2563eb;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .intention-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+    .timer-display {
+      font-size: 32px;
+      font-weight: 800;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      color: #2563eb;
+      margin: 12px 0 4px 0;
+    }
+    .subtext {
+      font-size: 12px;
+      color: #64748b;
+      font-style: italic;
+    }
+    input[type="text"] {
+      width: 100%;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 12px;
+      color: #0f172a;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 12px;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus {
+      border-color: #2563eb;
+    }
+    button.btn-primary {
+      width: 100%;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button.btn-primary:hover {
+      background: #1d4ed8;
+    }
+    button.btn-secondary {
+      width: 100%;
+      background: transparent;
+      color: #64748b;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    button.btn-secondary:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>STILL</h1>
+    <span class="tagline">Presence</span>
+  </div>
+
+  <div id="activeContainer" class="card" style="display: none;">
+    <div class="label">Current Intention</div>
+    <div id="intentionLabel" class="intention-text">---</div>
+    <div class="timer-display" id="timer">00:00:00</div>
+    <div class="subtext">You're still here. Stay with it.</div>
+    <button id="finishBtn" class="btn-secondary">Finish Session</button>
+  </div>
+
+  <div id="inputContainer" class="card">
+    <div class="label" style="text-align: left; margin-bottom: 10px;">What are you doing right now?</div>
+    <input type="text" id="intentionInput" placeholder="e.g. Building SchoolPulse" />
+    <button id="setBtn" class="btn-primary">I'm doing this</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

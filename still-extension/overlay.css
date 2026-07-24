@@ -1,0 +1,109 @@
+#still-overlay-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(13, 17, 23, 0.94);
+  backdrop-filter: blur(10px);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #ffffff;
+}
+
+.still-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+.still-header {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.still-prompt {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.still-sub {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.still-btn {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.still-btn:active { transform: scale(0.98); }
+
+.still-primary {
+  background: #2563eb; /* Brand Blue */
+  color: #ffffff;
+}
+
+.still-primary:hover {
+  background: #1d4ed8;
+}
+
+.still-secondary {
+  background: #21262d;
+  color: #ffffff;
+  border: 1px solid #30363d;
+}
+
+.still-secondary:hover {
+  background: #30363d;
+}
+
+.still-tertiary {
+  background: transparent;
+  color: #94a3b8;
+}
+
+.still-chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.still-chip {
+  background: #21262d;
+  color: #ffffff;
+  border: 1px solid #30363d;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.still-chip:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
